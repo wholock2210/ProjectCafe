@@ -31,12 +31,9 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
-            nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             label1 = new Label();
             btnSidebar = new PictureBox();
             sidebarContainer = new FlowLayoutPanel();
-            pnDashboard = new Panel();
-            btnDashboard = new Button();
             menuContainer = new FlowLayoutPanel();
             panel6 = new Panel();
             menu = new Button();
@@ -44,61 +41,45 @@
             btnSubMenu1 = new Button();
             panel8 = new Panel();
             btnSubMenu2 = new Button();
-            pnSettings = new Panel();
-            btnSettings = new Button();
-            pnAbout = new Panel();
-            btnAbout = new Button();
+            panel2 = new Panel();
+            button1 = new Button();
+            panel3 = new Panel();
+            button2 = new Button();
+            pnDashboard = new Panel();
+            btnDashboard = new Button();
             pnLogout = new Panel();
             btnLogout = new Button();
+            pnAbout = new Panel();
+            btnAbout = new Button();
+            pnSettings = new Panel();
+            btnSettings = new Button();
             menuTransititon = new System.Windows.Forms.Timer(components);
             sidebarTransition = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnSidebar).BeginInit();
             sidebarContainer.SuspendLayout();
-            pnDashboard.SuspendLayout();
             menuContainer.SuspendLayout();
             panel6.SuspendLayout();
             panel7.SuspendLayout();
             panel8.SuspendLayout();
-            pnSettings.SuspendLayout();
-            pnAbout.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            pnDashboard.SuspendLayout();
             pnLogout.SuspendLayout();
+            pnAbout.SuspendLayout();
+            pnSettings.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(nightControlBox1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btnSidebar);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(965, 42);
+            panel1.Size = new Size(798, 42);
             panel1.TabIndex = 0;
-            // 
-            // nightControlBox1
-            // 
-            nightControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            nightControlBox1.BackColor = Color.Transparent;
-            nightControlBox1.CloseHoverColor = Color.FromArgb(199, 80, 80);
-            nightControlBox1.CloseHoverForeColor = Color.White;
-            nightControlBox1.DefaultLocation = true;
-            nightControlBox1.DisableMaximizeColor = Color.FromArgb(105, 105, 105);
-            nightControlBox1.DisableMinimizeColor = Color.FromArgb(105, 105, 105);
-            nightControlBox1.EnableCloseColor = Color.FromArgb(160, 160, 160);
-            nightControlBox1.EnableMaximizeButton = true;
-            nightControlBox1.EnableMaximizeColor = Color.FromArgb(160, 160, 160);
-            nightControlBox1.EnableMinimizeButton = true;
-            nightControlBox1.EnableMinimizeColor = Color.FromArgb(160, 160, 160);
-            nightControlBox1.Location = new Point(826, 0);
-            nightControlBox1.MaximizeHoverColor = Color.FromArgb(15, 255, 255, 255);
-            nightControlBox1.MaximizeHoverForeColor = Color.White;
-            nightControlBox1.MinimizeHoverColor = Color.FromArgb(15, 255, 255, 255);
-            nightControlBox1.MinimizeHoverForeColor = Color.White;
-            nightControlBox1.Name = "nightControlBox1";
-            nightControlBox1.Size = new Size(139, 31);
-            nightControlBox1.TabIndex = 2;
             // 
             // label1
             // 
@@ -124,43 +105,18 @@
             // sidebarContainer
             // 
             sidebarContainer.BackColor = Color.FromArgb(23, 24, 29);
-            sidebarContainer.Controls.Add(pnDashboard);
             sidebarContainer.Controls.Add(menuContainer);
-            sidebarContainer.Controls.Add(pnSettings);
-            sidebarContainer.Controls.Add(pnAbout);
+            sidebarContainer.Controls.Add(pnDashboard);
             sidebarContainer.Controls.Add(pnLogout);
+            sidebarContainer.Controls.Add(pnAbout);
+            sidebarContainer.Controls.Add(pnSettings);
             sidebarContainer.Dock = DockStyle.Left;
             sidebarContainer.FlowDirection = FlowDirection.TopDown;
             sidebarContainer.Location = new Point(0, 42);
             sidebarContainer.Name = "sidebarContainer";
             sidebarContainer.Padding = new Padding(0, 30, 0, 0);
-            sidebarContainer.Size = new Size(58, 548);
+            sidebarContainer.Size = new Size(56, 406);
             sidebarContainer.TabIndex = 1;
-            // 
-            // pnDashboard
-            // 
-            pnDashboard.Controls.Add(btnDashboard);
-            pnDashboard.Location = new Point(3, 33);
-            pnDashboard.Name = "pnDashboard";
-            pnDashboard.Size = new Size(247, 61);
-            pnDashboard.TabIndex = 3;
-            // 
-            // btnDashboard
-            // 
-            btnDashboard.BackColor = Color.FromArgb(23, 24, 29);
-            btnDashboard.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDashboard.ForeColor = Color.White;
-            btnDashboard.Image = (Image)resources.GetObject("btnDashboard.Image");
-            btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboard.Location = new Point(-16, -8);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Padding = new Padding(25, 0, 0, 0);
-            btnDashboard.Size = new Size(276, 78);
-            btnDashboard.TabIndex = 2;
-            btnDashboard.Text = "         Dashboard";
-            btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
-            btnDashboard.UseVisualStyleBackColor = false;
-            btnDashboard.Click += button1_Click;
             // 
             // menuContainer
             // 
@@ -168,10 +124,12 @@
             menuContainer.Controls.Add(panel6);
             menuContainer.Controls.Add(panel7);
             menuContainer.Controls.Add(panel8);
-            menuContainer.Location = new Point(0, 97);
+            menuContainer.Controls.Add(panel2);
+            menuContainer.Controls.Add(panel3);
+            menuContainer.Location = new Point(0, 30);
             menuContainer.Margin = new Padding(0);
             menuContainer.Name = "menuContainer";
-            menuContainer.Size = new Size(247, 61);
+            menuContainer.Size = new Size(250, 61);
             menuContainer.TabIndex = 7;
             // 
             // panel6
@@ -190,7 +148,7 @@
             menu.ForeColor = Color.White;
             menu.Image = (Image)resources.GetObject("menu.Image");
             menu.ImageAlign = ContentAlignment.MiddleLeft;
-            menu.Location = new Point(-16, -8);
+            menu.Location = new Point(-13, -8);
             menu.Name = "menu";
             menu.Padding = new Padding(25, 0, 0, 0);
             menu.Size = new Size(276, 78);
@@ -221,7 +179,7 @@
             btnSubMenu1.Padding = new Padding(25, 0, 0, 0);
             btnSubMenu1.Size = new Size(276, 78);
             btnSubMenu1.TabIndex = 2;
-            btnSubMenu1.Text = "         Sub Menu 1";
+            btnSubMenu1.Text = "              Đặt Món";
             btnSubMenu1.TextAlign = ContentAlignment.MiddleLeft;
             btnSubMenu1.UseVisualStyleBackColor = false;
             btnSubMenu1.Click += btnSubMenu1_Click;
@@ -247,33 +205,108 @@
             btnSubMenu2.Padding = new Padding(25, 0, 0, 0);
             btnSubMenu2.Size = new Size(276, 78);
             btnSubMenu2.TabIndex = 2;
-            btnSubMenu2.Text = "         Sub Menu 2";
+            btnSubMenu2.Text = "              Khách Hàng";
             btnSubMenu2.TextAlign = ContentAlignment.MiddleLeft;
             btnSubMenu2.UseVisualStyleBackColor = false;
             // 
-            // pnSettings
+            // panel2
             // 
-            pnSettings.Controls.Add(btnSettings);
-            pnSettings.Location = new Point(3, 161);
-            pnSettings.Name = "pnSettings";
-            pnSettings.Size = new Size(247, 61);
-            pnSettings.TabIndex = 4;
+            panel2.Controls.Add(button1);
+            panel2.Location = new Point(0, 183);
+            panel2.Margin = new Padding(0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(247, 61);
+            panel2.TabIndex = 11;
             // 
-            // btnSettings
+            // button1
             // 
-            btnSettings.BackColor = Color.FromArgb(23, 24, 29);
-            btnSettings.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSettings.ForeColor = Color.White;
-            btnSettings.Image = (Image)resources.GetObject("btnSettings.Image");
-            btnSettings.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSettings.Location = new Point(-16, -8);
-            btnSettings.Name = "btnSettings";
-            btnSettings.Padding = new Padding(25, 0, 0, 0);
-            btnSettings.Size = new Size(276, 78);
-            btnSettings.TabIndex = 2;
-            btnSettings.Text = "         Settings";
-            btnSettings.TextAlign = ContentAlignment.MiddleLeft;
-            btnSettings.UseVisualStyleBackColor = false;
+            button1.BackColor = Color.FromArgb(32, 33, 36);
+            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(-16, -8);
+            button1.Name = "button1";
+            button1.Padding = new Padding(25, 0, 0, 0);
+            button1.Size = new Size(276, 78);
+            button1.TabIndex = 2;
+            button1.Text = "              Bàn";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(button2);
+            panel3.Location = new Point(0, 244);
+            panel3.Margin = new Padding(0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(247, 61);
+            panel3.TabIndex = 12;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(32, 33, 36);
+            button2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(-16, -8);
+            button2.Name = "button2";
+            button2.Padding = new Padding(25, 0, 0, 0);
+            button2.Size = new Size(276, 78);
+            button2.TabIndex = 2;
+            button2.Text = "              Công Thức";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // pnDashboard
+            // 
+            pnDashboard.Controls.Add(btnDashboard);
+            pnDashboard.Location = new Point(3, 94);
+            pnDashboard.Name = "pnDashboard";
+            pnDashboard.Size = new Size(247, 61);
+            pnDashboard.TabIndex = 3;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.BackColor = Color.FromArgb(23, 24, 29);
+            btnDashboard.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDashboard.ForeColor = Color.White;
+            btnDashboard.Image = (Image)resources.GetObject("btnDashboard.Image");
+            btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDashboard.Location = new Point(-16, -8);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Padding = new Padding(25, 0, 0, 0);
+            btnDashboard.Size = new Size(276, 78);
+            btnDashboard.TabIndex = 2;
+            btnDashboard.Text = "         Dashboard";
+            btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
+            btnDashboard.UseVisualStyleBackColor = false;
+            btnDashboard.Click += button1_Click;
+            // 
+            // pnLogout
+            // 
+            pnLogout.Controls.Add(btnLogout);
+            pnLogout.Location = new Point(3, 161);
+            pnLogout.Name = "pnLogout";
+            pnLogout.Size = new Size(247, 61);
+            pnLogout.TabIndex = 6;
+            // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.FromArgb(23, 24, 29);
+            btnLogout.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = Color.White;
+            btnLogout.Image = (Image)resources.GetObject("btnLogout.Image");
+            btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLogout.Location = new Point(-16, -8);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Padding = new Padding(25, 0, 0, 0);
+            btnLogout.Size = new Size(276, 78);
+            btnLogout.TabIndex = 2;
+            btnLogout.Text = "         Đăng Xuất";
+            btnLogout.TextAlign = ContentAlignment.MiddleLeft;
+            btnLogout.UseVisualStyleBackColor = false;
             // 
             // pnAbout
             // 
@@ -295,33 +328,33 @@
             btnAbout.Padding = new Padding(25, 0, 0, 0);
             btnAbout.Size = new Size(276, 78);
             btnAbout.TabIndex = 2;
-            btnAbout.Text = "         About";
+            btnAbout.Text = "         Thông Tin";
             btnAbout.TextAlign = ContentAlignment.MiddleLeft;
             btnAbout.UseVisualStyleBackColor = false;
             // 
-            // pnLogout
+            // pnSettings
             // 
-            pnLogout.Controls.Add(btnLogout);
-            pnLogout.Location = new Point(3, 295);
-            pnLogout.Name = "pnLogout";
-            pnLogout.Size = new Size(247, 61);
-            pnLogout.TabIndex = 6;
+            pnSettings.Controls.Add(btnSettings);
+            pnSettings.Location = new Point(3, 295);
+            pnSettings.Name = "pnSettings";
+            pnSettings.Size = new Size(247, 61);
+            pnSettings.TabIndex = 4;
             // 
-            // btnLogout
+            // btnSettings
             // 
-            btnLogout.BackColor = Color.FromArgb(23, 24, 29);
-            btnLogout.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogout.ForeColor = Color.White;
-            btnLogout.Image = (Image)resources.GetObject("btnLogout.Image");
-            btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLogout.Location = new Point(-16, -8);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Padding = new Padding(25, 0, 0, 0);
-            btnLogout.Size = new Size(276, 78);
-            btnLogout.TabIndex = 2;
-            btnLogout.Text = "         Logout";
-            btnLogout.TextAlign = ContentAlignment.MiddleLeft;
-            btnLogout.UseVisualStyleBackColor = false;
+            btnSettings.BackColor = Color.FromArgb(23, 24, 29);
+            btnSettings.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSettings.ForeColor = Color.White;
+            btnSettings.Image = (Image)resources.GetObject("btnSettings.Image");
+            btnSettings.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSettings.Location = new Point(-16, -11);
+            btnSettings.Name = "btnSettings";
+            btnSettings.Padding = new Padding(25, 0, 0, 0);
+            btnSettings.Size = new Size(276, 78);
+            btnSettings.TabIndex = 2;
+            btnSettings.Text = "         Cài Đặt";
+            btnSettings.TextAlign = ContentAlignment.MiddleLeft;
+            btnSettings.UseVisualStyleBackColor = false;
             // 
             // menuTransititon
             // 
@@ -337,26 +370,30 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(965, 590);
+            ClientSize = new Size(798, 448);
             Controls.Add(sidebarContainer);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
             IsMdiContainer = true;
             MaximumSize = new Size(1920, 1030);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
+            Text = " ";
+            Load += Form1_Load;
+            Resize += Form1_Resize;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnSidebar).EndInit();
             sidebarContainer.ResumeLayout(false);
-            pnDashboard.ResumeLayout(false);
             menuContainer.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel8.ResumeLayout(false);
-            pnSettings.ResumeLayout(false);
-            pnAbout.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            pnDashboard.ResumeLayout(false);
             pnLogout.ResumeLayout(false);
+            pnAbout.ResumeLayout(false);
+            pnSettings.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -383,7 +420,10 @@
         private Panel panel8;
         private Button btnSubMenu2;
         private System.Windows.Forms.Timer menuTransititon;
-        private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private System.Windows.Forms.Timer sidebarTransition;
+        private Panel panel2;
+        private Button button1;
+        private Panel panel3;
+        private Button button2;
     }
 }

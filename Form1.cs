@@ -1,3 +1,7 @@
+﻿
+using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using ProjectCafe.Script;
 
 namespace ProjectCafe
@@ -5,29 +9,29 @@ namespace ProjectCafe
     public partial class Form1 : Form
     {
         FormDashboard dashboard;
-        FormSub1 sub1;
+        Order sub1;
         FormSub2 sub2;
         FormSettings settings;
         FormAbout about;
+        DVSqlite db = new DVSqlite();
         public Form1()
         {
             InitializeComponent();
-            mdiProp();
+        }
+
+        void LoadDataBase()
+        {
+
         }
 
         bool menuExpand = false;
 
-        private void mdiProp()
-        {
-            this.SetBevel(false);
-            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(232,234,237);
-        }
         private void menuTransititon_Tick(object sender, EventArgs e)
         {
             if (!menuExpand)
             {
                 menuContainer.Height += 10;
-                if (menuContainer.Height >= 192)
+                if (menuContainer.Height >= 314)
                 {
                     menuTransititon.Stop();
                     menuExpand = true;
@@ -112,9 +116,9 @@ namespace ProjectCafe
 
         private void btnSubMenu1_Click(object sender, EventArgs e)
         {
-            if(sub1 == null)
+            if (sub1 == null)
             {
-                sub1 = new FormSub1();
+                sub1 = new Order();
                 sub1.FormClosed += Sub1_FormClosed;
                 sub1.MdiParent = this;
                 sub1.Dock = DockStyle.Fill;
@@ -129,6 +133,18 @@ namespace ProjectCafe
         private void Sub1_FormClosed(object? sender, FormClosedEventArgs e)
         {
             sub1 = null;
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            pnDashboard.Width = sidebarContainer.Width;
+            pnSettings.Width = sidebarContainer.Width;
+            pnAbout.Width = sidebarContainer.Width;                       
+            pnLogout.Width = sidebarContainer.Width;
+            menuContainer.Width = sidebarContainer.Width;
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
         }
     }
 }
